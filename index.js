@@ -34,7 +34,7 @@ router.get("/", (req, res) => {
 
 app.use("/api/v1", mainRouter);
 
-app.listen(PORT, (error) => {
+app.listen(PORT, `0.0.0.0`, (error) => {
   if (error) {
     console.log(`Error while server down, ERROR: ${error.message}`);
     return;
