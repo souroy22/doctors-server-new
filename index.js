@@ -1,11 +1,14 @@
 import express from "express";
 import cors from "cors";
 import mainRouter from "./app/routers/index.js";
+import dotenv from "dotenv";
 
 const app = express();
 const router = express.Router();
 
-const PORT = 5000;
+dotenv.config();
+
+const PORT = process.env.PORT || 5000;
 
 // Define a whitelist of allowed origins
 const whitelist = ["http://localhost:5173", "https://flex-health.netlify.app"];
